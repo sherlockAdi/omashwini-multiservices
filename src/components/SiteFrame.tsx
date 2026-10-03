@@ -4,7 +4,7 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-const links = [['Home', '/'], ['About', '/about/'], ['Services', '/focus/'], ['Leadership', '/leadership/'], ['Company', '/company/'], ['Contact', '/contact/']];
+const links = [['Home', '/'], ['About', '/about/'], ['Mission', '/mission/'], ['Services', '/business/'], ['Technology', '/technology/'], ['Directors', '/directors/'], ['Contact', '/offices/']];
 
 function Brand() {
   return <a className="brand" href={`${base}/`} aria-label="Omashwini home"><img src={`${base}/omashwini-mark.png`} alt="" /><span><b>OMASHWINI</b><small>MULTISERVICES PRIVATE LIMITED</small></span></a>;

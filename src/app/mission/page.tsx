@@ -1,0 +1,3 @@
+import ProfilePage from '@/components/ProfilePage';
+export const metadata = { title: 'Our mission' };
+export default function MissionPage() { return <ProfilePage current="/mission/" label="02 / OUR MISSION" number="02" title={<>Our mission is to deliver<br /><em>responsive solutions.</em></>} intro="We strive to provide innovative and responsive solutions that exceed the expectations of our clients." sections={[{heading:'Our mission',bullets:['Provide innovative and responsive solutions that exceed client expectations.','Simplify the process of identifying and resolving issues by expediting the resolution timeframe.','Help clients create value in their businesses through value-generating services.']}]}/>; }
