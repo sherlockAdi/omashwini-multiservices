@@ -1,3 +1,3 @@
-import CompanyWebsite from '@/components/CompanyWebsite';
+import SiteFrame, { PageHero } from '@/components/SiteFrame';
 export const metadata = { title: 'Leadership' };
-export default function Page() { return <CompanyWebsite page="leadership"/>; }
+export default function LeadershipPage() { return <SiteFrame current="/leadership/"><PageHero label="03 / LEADERSHIP" title={<>People who lead with<br /><em>purpose.</em></>}><p>The leadership team brings responsibility, direction and a commitment to the company’s future.</p></PageHero><section className="leadership-grid section-space"><span className="page-number">03</span>{[['AK','Ashwini Kumar Shukla'],['AS','Ashish Shukla']].map(([initials,name],i)=><article className={`leader-profile reveal delay-${i}`} key={name}><div className="initial-panel">{initials}<img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/omashwini-mark.png`} alt=""/></div><div><span className="overline blue">DIRECTOR</span><h2>{name}</h2><p>Director, Omashwini Multiservices Private Limited</p></div></article>)}</section></SiteFrame>; }

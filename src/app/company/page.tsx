@@ -1,3 +1,5 @@
-import CompanyWebsite from '@/components/CompanyWebsite';
+import { CheckCircle2 } from 'lucide-react';
+import SiteFrame, { PageHero } from '@/components/SiteFrame';
 export const metadata = { title: 'Company details' };
-export default function Page() { return <CompanyWebsite page="company"/>; }
+const fields=[['Legal name','Omashwini Multiservices Private Limited'],['CIN','U78300UP2023PTC182052'],['Registration number','182052'],['Incorporation date','12 May 2023'],['ROC','Uttar Pradesh'],['Company type','Private non-government company'],['Listing status','Unlisted'],['Status','Active'],['Business classification','Personal and multiservices business']];
+export default function CompanyPage() { return <SiteFrame current="/company/"><PageHero label="04 / COMPANY DETAILS" title={<>A company profile<br /><em>built on clarity.</em></>}><p>Core details of Omashwini Multiservices Private Limited.</p></PageHero><section className="company-record section-space"><div><span className="page-number">04</span><span className="overline blue">CORPORATE RECORD</span><h2>Our identity,<br />at a glance.</h2><p>All information below is based on the company details provided for this website.</p></div><dl>{fields.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{label==='Status'?<span className="active-status"><CheckCircle2 size={16}/>{value}</span>:value}</dd></div>)}</dl></section></SiteFrame>; }

@@ -1,3 +1,5 @@
-import CompanyWebsite from '@/components/CompanyWebsite';
-export const metadata = { title: 'Our focus' };
-export default function Page() { return <CompanyWebsite page="focus"/>; }
+import { UsersRound, Layers3, ShieldCheck } from 'lucide-react';
+import SiteFrame, { PageHero } from '@/components/SiteFrame';
+export const metadata = { title: 'Our services' };
+const pillars = [[UsersRound,'People first','We approach every opportunity with care, respectful communication and attention to the people involved.'],[Layers3,'Multiservices perspective','Our business classification reflects a flexible, practical outlook across personal and multiservices requirements.'],[ShieldCheck,'Responsible foundation','Our corporate profile, active status and established leadership offer a clear starting point for confidence.']];
+export default function FocusPage() { return <SiteFrame current="/focus/"><PageHero label="02 / OUR SERVICES" title={<>Services built around<br /><em>real people.</em></>}><p>A simple, responsible multiservices outlook that starts with understanding the requirement in front of us.</p></PageHero><section className="pillars section-space">{pillars.map(([Icon,title,text], index) => { const I=Icon as typeof UsersRound; return <article className={`reveal delay-${index}`} key={title as string}><span>0{index+1}</span><I size={36}/><h2>{title as string}</h2><p>{text as string}</p></article>; })}</section><section className="blue-cta"><span className="overline">OUR APPROACH</span><h2>Clear conversations.<br /><em>Thoughtful next steps.</em></h2></section></SiteFrame>; }
